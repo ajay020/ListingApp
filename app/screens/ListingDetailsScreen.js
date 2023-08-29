@@ -14,7 +14,7 @@ const ListingDetailScreen = ({ route }) => {
         style={styles.image}
         preview={listing.images[0].thumbnailUrl}
         tint="light"
-        uri={listing.images[0].url}
+        uri={listing?.images[0]?.url}
       />
       <View style={styles.detailContainer}>
         <AppText style={styles.title}>{listing.title}</AppText>

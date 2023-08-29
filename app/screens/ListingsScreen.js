@@ -7,6 +7,8 @@ import routes from "../navigation/routes";
 import AppText from "../components/AppText";
 import AppButton from "../components/AppButton";
 import useApi from "../hooks/useApi";
+import { colors } from "../config/colors";
+import CustomActivityIndicator from "../components/CustomActivityIndicator";
 
 const ListingsScreen = ({ navigation }) => {
   const {
@@ -28,7 +30,7 @@ const ListingsScreen = ({ navigation }) => {
           <AppButton title={"Retry"} onPress={loadListings} />
         </>
       )}
-      <ActivityIndicator animating={loading} size={"large"} />
+      <CustomActivityIndicator visible={loading} />
       <FlatList
         style={styles.container}
         data={listings}
